@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "0.12"
+  - "0.11"
+  - "0.10"
+  - "iojs"
+after_script:
+  - "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  - "CODECLIMATE_REPO_TOKEN=2fe137798694e1426cdf2367bc116b06bb3052eb3d1dfacb77c53143b9186790 codeclimate ./node_modules/.bin/codeclimate < ./coverage/lcov.info"
