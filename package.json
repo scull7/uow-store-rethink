@@ -31,5 +31,8 @@
     "mocha-lcov-reporter": "0.0.2",
     "sinon": "^1.15.3",
     "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.30"
   }
 }
