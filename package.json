@@ -33,6 +33,9 @@
     "sinon-chai": "^2.8.0"
   },
   "dependencies": {
-    "bluebird": "^2.9.30"
+    "bluebird": "^2.9.30",
+    "ramda": "^0.15.1",
+    "rethinkdb": "^2.0.2",
+    "rethinkdb-pool": "^0.4.0"
   }
 }

@@ -1,5 +1,6 @@
 (function(global) {
   'use strict';
+  var Pool              = require('../lib/db');
 
   global.sinon          = require('sinon');
   global.chai           = require('chai');
@@ -11,6 +12,10 @@
     try {
       thrower();
     } catch (e) {}
+  };
+
+  global.rethinkConfig  = {
+    db: 'test_uow_store_rethink'
   };
 
   var sinonChai         = require('sinon-chai');
