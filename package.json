@@ -39,6 +39,7 @@
     "bluebird": "^2.9.30",
     "ramda": "^0.15.1",
     "rethinkdb": "^2.0.2",
-    "rethinkdb-pool": "^0.4.0"
+    "rethinkdb-pool": "^0.4.0",
+    "uow-store": "0.0.1"
   }
 }
