@@ -1,7 +1,7 @@
 var Pool  = require('../lib/db.js');
 
 before(function(done) {
-  var dbName        = rethinkConfig.db
+  var dbName        = rethinkConfig.db;
   var db            = Pool(rethinkConfig);
   var hasTestDb     = db.r.dbList().contains(dbName);
   var createTestDb  = db.r.dbCreate(dbName);
