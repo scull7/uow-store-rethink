@@ -21,6 +21,9 @@
     "url": "https://github.com/scull7/uow-store-rethink/issues"
   },
   "homepage": "https://github.com/scull7/uow-store-rethink#readme",
+  "jscsConfig": {
+    "requireSemicolons": true
+  },
   "devDependencies": {
     "chai": "^3.0.0",
     "codeclimate-test-reporter": "0.0.4",
