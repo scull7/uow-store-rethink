@@ -72,11 +72,11 @@ describe 'Rethink Driver', ->
 
       beforeEach ->
         @clock  = sinon.useFakeTimers()
-        driver2 = new Driver(rethinkConfig)
+        driver2 = new Driver(R.merge(rethinkConfig, { runTaskSearch : true }))
 
       afterEach -> @clock.restore
 
-      it 'should run every 500 ms by default', (done) ->
+      it 'should run every 500 ms when initialized to do so', (done) ->
 
         tick        = @clock.tick.bind(@clock)
         readyTasks  = []
@@ -89,6 +89,7 @@ describe 'Rethink Driver', ->
               expect(readyTasks.length).to.eql 2
               expect(readyTasks.indexOf('not-ready-1')).to.eql -1
               expect(readyTasks.indexOf('not-ready-2')).to.eql -1
+              driver2.runTaskSearch = false
               done()
             , 5
 
