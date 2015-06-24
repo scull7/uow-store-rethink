@@ -1,3 +1,4 @@
+require '../create-db.js'
 
 R             = require 'ramda'
 bluebird      = require 'bluebird'
@@ -39,6 +40,9 @@ describe 'Rethink Driver', ->
         semaphore : true
 
       return bluebird.join(t1, t2, t3, t4)
+
+      .catch RangeError, (e) ->
+        console.log 'CAUGHT RANGE ERROR: ', e
 
   describe '::findReady', ->
 

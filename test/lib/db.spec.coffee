@@ -1,3 +1,5 @@
+require '../create-db.js'
+
 rethinkdb = require 'rethinkdb'
 DB        = require '../../lib/db.js'
 
