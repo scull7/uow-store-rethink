@@ -40,6 +40,7 @@
     "ramda": "^0.15.1",
     "rethinkdb": "^2.0.2",
     "rethinkdb-pool": "^0.4.0",
-    "uow-store": "0.0.1"
+    "uow-lock": "0.0.1",
+    "uow-store": "0.0.2"
   }
 }

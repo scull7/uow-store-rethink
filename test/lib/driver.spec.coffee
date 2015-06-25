@@ -2,16 +2,17 @@ require '../create-db.js'
 
 R             = require 'ramda'
 bluebird      = require 'bluebird'
+DB            = require '../../lib/db.js'
 Driver        = require '../../lib/driver.js'
 
 describe 'Rethink Driver', ->
   driver      = null
 
-  beforeEach ->
-    config    = R.merge rethinkConfig,
-      runTaskSearch       : false
+  before -> DB(rethinkConfig).install()
 
-    driver    = new Driver(config)
+  beforeEach ->
+
+    driver    = new Driver(rethinkConfig)
 
     return driver.db.run(driver.r.table('uow_task').delete())
 
