@@ -1,6 +1,6 @@
 {
   "name": "uow-store-rethink",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A RethinkDB storage driver for the Unit-of-Work Queue module.",
   "main": "index.js",
   "scripts": {
